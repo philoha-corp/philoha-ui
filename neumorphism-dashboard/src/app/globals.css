@@ -125,6 +125,42 @@
   }
 }
 
+/* Shadcn sidebar neumorphism overrides */
+[data-slot="sidebar-container"] {
+  border: none !important;
+}
+
+[data-slot="sidebar-inner"] {
+  background-color: var(--neu-bg) !important;
+  box-shadow:
+    10px 10px 20px var(--neu-shadow-dark),
+    -10px -10px 20px var(--neu-shadow-light) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 0 !important;
+}
+
+/* Override sidebar menu button active state for neumorphism */
+[data-sidebar="menu-button"][data-active] {
+  background-color: var(--neu-bg) !important;
+  box-shadow:
+    inset 6px 6px 12px var(--neu-shadow-dark),
+    inset -6px -6px 12px var(--neu-shadow-light) !important;
+  color: var(--neu-primary) !important;
+}
+
+/* Icon-mode collapsed sidebar adjustments */
+[data-collapsible="icon"] [data-slot="sidebar-inner"] {
+  box-shadow:
+    5px 5px 10px var(--neu-shadow-dark),
+    -5px -5px 10px var(--neu-shadow-light) !important;
+}
+
+[data-collapsible="icon"] [data-sidebar="menu-button"][data-active] {
+  box-shadow:
+    inset 3px 3px 6px var(--neu-shadow-dark),
+    inset -3px -3px 6px var(--neu-shadow-light) !important;
+}
+
 /* Neumorphic utility classes */
 .neu-flat {
   background-color: var(--neu-bg);

@@ -1,19 +1,12 @@
 "use client";
 
-export default function Header({ onMenuToggle }: { onMenuToggle: () => void }) {
+import { SidebarTrigger } from "@/components/ui/sidebar";
+
+export default function Header() {
   return (
     <header className="h-24 flex-shrink-0 flex items-center justify-between px-6 lg:px-10 z-10 relative bg-neu-bg">
       <div className="flex items-center gap-4">
-        <button
-          onClick={onMenuToggle}
-          className="lg:hidden text-gray-500 hover:text-gray-800 neu-btn w-10 h-10 rounded-xl flex items-center justify-center"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
-        </button>
+        <SidebarTrigger className="neu-btn w-10 h-10 rounded-xl text-gray-500 hover:text-gray-800" />
         <div className="hidden sm:flex items-center gap-2 text-sm">
           <span className="text-gray-500 hover:text-gray-800 cursor-pointer transition-colors font-medium">Home</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
